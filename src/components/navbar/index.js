@@ -1,3 +1,5 @@
+import { useState } from "react";
+import "./styles.css";
 import { BiSearch } from "react-icons/bi";
 import { BsPerson } from "react-icons/bs";
 import { FiX, FiMenu } from "react-icons/fi";
@@ -8,8 +10,6 @@ import {
   FaTwitter,
   FaYoutube,
 } from "react-icons/fa";
-import { useState } from "react";
-import "./styles.css";
 
 const Navbar = () => {
   const [menuClicked, setMenuClicked] = useState(false);
@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar">
+    <nav className={menuClicked ? "navbar navbar-bg" : "navbar"}>
       <h2>BEACHES.</h2>
 
       <ul className="nav-menu">
