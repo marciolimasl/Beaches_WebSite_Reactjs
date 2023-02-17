@@ -1,16 +1,39 @@
+import React from "react";
 import "./styles.css";
+import { AiOutlineSearch } from "react-icons/ai";
+
 import Video from "../../assets/maldivesVideo.mp4";
 
-const Hero = () => {
+function Hero() {
+  const searchSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <section className="hero">
+    <div className="hero">
       <video autoPlay loop muted id="video">
         <source src={Video} type="video/mp4" />
       </video>
 
       <div className="overlay"></div>
-    </section>
+
+      <div className="content">
+        <h1>First Class Travel</h1>
+        <h2>Top 1% Locations Worldwide</h2>
+
+        <form onSubmit={searchSubmit} className="form">
+          <div>
+            <input type="text" placeholder="Search Destinations" />
+          </div>
+          <div>
+            <button>
+              <AiOutlineSearch className="icon" />
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
-};
+}
 
 export default Hero;
