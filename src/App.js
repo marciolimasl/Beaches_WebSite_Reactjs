@@ -1,6 +1,7 @@
 import Destinations from "./components/destinations";
 import Hero from "./components/hero";
 import Navbar from "./components/navbar";
+import Search from "./components/Search";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Navbar />
       <Hero />
       <Destinations />
+      <Search />
     </div>
   );
 }
